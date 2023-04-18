@@ -20,7 +20,7 @@ O sistema possuí 2 cards na página:
   - UF: SS (duas letras)
   - DDD: (00) (dois números com os parenteses que são automaticamente preenchidos)
   
-  # Organização
+# Organização
   O sistema foi organizado e separado em pastas.
   
   O código principal desenvolvido por mim está no componente "form" localizado na pasta "components" e está organizado nos devidos arquivos .html, .ts e .scss (como é uma aplicação pequena, sem outras páginas, por sua vez sem necessidade de um router, só adicionei a chamada do componente que criei no final do app.component.html)
