@@ -1,17 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from '../hello.component';
 import { FormComponent } from './components/form/form.component';
 
-import { AppService } from './app.service';
+//dependencias materials
 import { MatExpansionModule } from '@angular/material/expansion';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormServiceService } from './service/formService/formService.service';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+//dependencias materials
 
+//dependencias internas
+import { AppService } from './app.service';
+import { FormServiceService } from './service/formService/formService.service';
+//dependencias internas
+
+//dependencias externas
 import { HttpClientModule } from '@angular/common/http';
+//dependencias externas
 
 @NgModule({
   imports: [
@@ -19,6 +30,10 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     FormsModule,
     MatExpansionModule,
+    MatCardModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
     HttpClientModule,
   ],
   declarations: [AppComponent, HelloComponent, FormComponent],
