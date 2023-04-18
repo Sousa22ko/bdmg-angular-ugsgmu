@@ -1,7 +1,10 @@
 <mat-card>
   <mat-card-subtitle>Dados da api (editável)</mat-card-subtitle>
   <div class="dados">
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="fill" (focusin)="focus()" (focusout)="focus()">
+      <mat-hint *ngIf="hint"
+        >digitar o cep irá automaticamente pesquisar</mat-hint
+      >
       <mat-label>CEP:</mat-label>
       <input
         placeholder="CEP:"
@@ -9,6 +12,7 @@
         mask="00000-000"
         class="input"
         [(ngModel)]="dadosApi.cep"
+        (ngModelChange)="checkCep($event)"
       />
     </mat-form-field>
     <mat-form-field appearance="fill">
@@ -45,6 +49,7 @@
       <input
         placeholder="UF:"
         matInput
+        mask="SS"
         class="input"
         [(ngModel)]="dadosApi.uf"
       />
@@ -63,6 +68,9 @@
       <input
         placeholder="DDD:"
         matInput
+        mask="00"
+        prefix="("
+        suffix=")"
         class="input"
         [(ngModel)]="dadosApi.ddd"
       />
@@ -103,7 +111,7 @@
     class="btnSalvar"
     (click)="salvarLocalStorage()"
   >
-    Salvar no LocalStorage
+    Salvar dados no LocalStorage
   </button>
 </mat-card>
 
@@ -158,6 +166,7 @@
       <input
         placeholder="UF:"
         matInput
+        mask="SS"
         disabled
         class="input"
         [(ngModel)]="localStorageData.uf"
@@ -178,6 +187,9 @@
       <input
         placeholder="DDD:"
         matInput
+        mask="00"
+        prefix="("
+        suffix=")"
         disabled
         class="input"
         [(ngModel)]="localStorageData.ddd"

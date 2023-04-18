@@ -17,7 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 
 //dependencias internas
 import { AppService } from './app.service';
-import { FormServiceService } from './service/formService/formService.service';
+import { CepService } from './service/cepService/cep.service';
 //dependencias internas
 
 //dependencias externas
@@ -40,6 +40,6 @@ import { NgxMaskModule } from 'ngx-mask';
   ],
   declarations: [AppComponent, HelloComponent, FormComponent],
   bootstrap: [AppComponent],
-  providers: [AppService, FormServiceService],
+  providers: [AppService, CepService],
 })
 export class AppModule {}

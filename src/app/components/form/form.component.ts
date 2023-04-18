@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IEndereco } from '../../models/endereco.model';
-import { FormServiceService } from '../../service/formService/formService.service';
+import { CepService } from '../../service/cepService/cep.service';
 
 @Component({
   selector: 'app-form',
@@ -10,8 +10,9 @@ import { FormServiceService } from '../../service/formService/formService.servic
 export class FormComponent implements OnInit {
   dadosApi: IEndereco;
   localStorageData: IEndereco;
+  hint: boolean = false;
 
-  constructor(private service: FormServiceService) {
+  constructor(private service: CepService) {
     let empty = {
       cep: '',
       bairro: '',
@@ -62,5 +63,17 @@ export class FormComponent implements OnInit {
     localStorage.setItem('uf', this.dadosApi.uf);
 
     this.loadLocalStorage();
+  }
+
+  checkCep(event): void {
+    if (event.length == 8) {
+      this.service.consultarCep(event).subscribe((resp) => {
+        this.dadosApi = resp;
+      });
+    }
+  }
+
+  focus() {
+    this.hint = !this.hint;
   }
 }

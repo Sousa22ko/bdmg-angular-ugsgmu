@@ -7,6 +7,10 @@ mat-form-field {
   max-width: 90%;
 }
 
+mat-hint {
+  color: blue;
+}
+
 ::ng-deep .mat-form-field-wrapper {
   min-width: 90%;
 }
