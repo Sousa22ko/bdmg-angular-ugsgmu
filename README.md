@@ -1,8 +1,8 @@
-# bdmg-angular-ugsgmu
+# Código disponível no stackblitz
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/bdmg-angular-sffslp)
 
-# bdmg-angular-ugsgmu
+# Preview da página
 
 [Acesse a página em 🔥](https://bdmg-angular-sffslp.stackblitz.io/)
 ![image](https://user-images.githubusercontent.com/18272944/232879736-36325f6a-8537-4b5c-ae1a-c8337c1ebde7.png)
@@ -20,3 +20,5 @@ O sistema possuí 2 cards na página:
   - UF: SS (duas letras)
   - DDD: (00) (dois números com os parenteses que são automaticamente preenchidos)
 
+###### dúvidas:
+<reinaldo.sousacarvalho.95@gmail.com>
