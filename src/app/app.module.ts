@@ -22,6 +22,7 @@ import { FormServiceService } from './service/formService/formService.service';
 
 //dependencias externas
 import { HttpClientModule } from '@angular/common/http';
+import { NgxMaskModule } from 'ngx-mask';
 //dependencias externas
 
 @NgModule({
@@ -35,6 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatInputModule,
     HttpClientModule,
+    NgxMaskModule.forRoot({ showMaskTyped: true, thousandSeparator: '.' }),
   ],
   declarations: [AppComponent, HelloComponent, FormComponent],
   bootstrap: [AppComponent],

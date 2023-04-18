@@ -6,6 +6,7 @@
       <input
         placeholder="CEP:"
         matInput
+        mask="00000-000"
         class="input"
         [(ngModel)]="dadosApi.cep"
       />
@@ -24,6 +25,8 @@
       <input
         placeholder="Complemento:"
         matInput
+        mask="separator.3"
+        [showMaskTyped]="false"
         class="input"
         [(ngModel)]="dadosApi.complemento"
       />
@@ -112,6 +115,7 @@
       <input
         placeholder="CEP:"
         matInput
+        mask="00000-000"
         disabled
         class="input"
         [(ngModel)]="localStorageData.cep"
@@ -133,6 +137,8 @@
         placeholder="Complemento:"
         matInput
         disabled
+        mask="separator.3"
+        [showMaskTyped]="false"
         class="input"
         [(ngModel)]="localStorageData.complemento"
       />
